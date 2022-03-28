@@ -18,7 +18,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{164839c5-5d70-4e6f-9efd-4cfd81574d38}</ProjectGuid>
     <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
-    <SourceWebVirtualPath>/BCATP</SourceWebVirtualPath>
+    <SourceWebVirtualPath>/BCATP.git</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <SourceWebProject>
     </SourceWebProject>
