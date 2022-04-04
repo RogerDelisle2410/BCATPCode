@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Default" %>
 
 	<!DOCTYPE html>
 
@@ -235,8 +235,8 @@
 	<body class="grad1">
 		<form runat="server">
 			<%--BCATP--%>
-			<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BCATPConnectionString %>"
-				SelectCommand="SELECT [name], [longitude], [latitude], [comment], [wiki] FROM [BCATP] union select null,null,null,null,null order by name"></asp:SqlDataSource>
+			<asp:SqlDataSource  ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BCATPConnectionString %>"
+				SelectCommand="SELECT [name], [longitude], [latitude], [comment], [wiki] FROM [bcatp] union select null,null,null,null,null order by name"></asp:SqlDataSource>
 			<%--DewLineData--%>
 			<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BCATPConnectionString %>"
 				SelectCommand="SELECT [name], [longitude], [latitude], [comment], [wiki] FROM [DewLine] union select null,null,null,null,null order by name"></asp:SqlDataSource>

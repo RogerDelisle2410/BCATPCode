@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class Default : System.Web.UI.Page
 {
     public decimal FromServerlatitude; // = 49.026512526906m;  
     public decimal FromServerlongitude; // = -122.3688582561165m;
@@ -29,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
             MyGlobals.selection = 0;
             DropDownList1.ForeColor = System.Drawing.Color.Red;
             DropDownList1.SelectedIndex = 1;
-            var theIndex = 1;
+            const int theIndex = 1;
             DataView rdrSql = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
             DisplayData(rdrSql, theIndex);
         }
@@ -163,7 +158,7 @@ public partial class _Default : System.Web.UI.Page
 
         TextBox1.Text = FromServerlongitude.ToString();
         TextBox2.Text = FromServerlatitude.ToString();
-        TextBox3.Text =  FromServercomment.ToString();
+        TextBox3.Text = FromServercomment;
 
         linkInfo.NavigateUrl = "";
         linkInfo.Text = "";
@@ -209,49 +204,49 @@ public partial class _Default : System.Web.UI.Page
         {
             case 0:
                 DropDownListIndex = DropDownList1.Items.IndexOf(DropDownList1.Items.FindByText(DropDownList1.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList1.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
                 break;
             case 1:
                 DropDownListIndex = DropDownList2.Items.IndexOf(DropDownList2.Items.FindByText(DropDownList2.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList2.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
                 break;
             case 2:
                 DropDownListIndex = DropDownList3.Items.IndexOf(DropDownList3.Items.FindByText(DropDownList3.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList3.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
                 break;
             case 3:
                 DropDownListIndex = DropDownList4.Items.IndexOf(DropDownList4.Items.FindByText(DropDownList4.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList4.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource4.Select(DataSourceSelectArguments.Empty);
                 break;
             case 4:
                 DropDownListIndex = DropDownList5.Items.IndexOf(DropDownList5.Items.FindByText(DropDownList5.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList5.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource5.Select(DataSourceSelectArguments.Empty);
                 break;
             case 5:
                 DropDownListIndex = DropDownList6.Items.IndexOf(DropDownList6.Items.FindByText(DropDownList6.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList6.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource6.Select(DataSourceSelectArguments.Empty);
                 break;
             case 6:
                 DropDownListIndex = DropDownList7.Items.IndexOf(DropDownList7.Items.FindByText(DropDownList7.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList7.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource7.Select(DataSourceSelectArguments.Empty);
                 break;
             case 7:
                 DropDownListIndex = DropDownList8.Items.IndexOf(DropDownList8.Items.FindByText(DropDownList8.SelectedValue));
-                DropDownListIndex -= 1;
+                DropDownListIndex--;
                 DropDownListIndexB = DropDownList8.Items.Count - 1;
                 rdrSqlPrevious = (DataView)SqlDataSource8.Select(DataSourceSelectArguments.Empty);
                 break;
@@ -300,7 +295,7 @@ public partial class _Default : System.Web.UI.Page
 
             TextBox1.Text = FromServerlongitude.ToString();
             TextBox2.Text = FromServerlatitude.ToString();
-            TextBox3.Text =  FromServercomment.ToString();
+            TextBox3.Text = FromServercomment;
             linkInfo.NavigateUrl = "";
             linkInfo.Text = "";
             if (FromServerwiki != "")
@@ -348,7 +343,7 @@ public partial class _Default : System.Web.UI.Page
             }
             TextBox1.Text = FromServerlongitude.ToString();
             TextBox2.Text = FromServerlatitude.ToString();
-            TextBox3.Text =  FromServercomment.ToString(); linkInfo.NavigateUrl = "";
+            TextBox3.Text = FromServercomment; linkInfo.NavigateUrl = "";
             linkInfo.Text = "";
             if (FromServerwiki != "")
             {
@@ -364,49 +359,49 @@ public partial class _Default : System.Web.UI.Page
         {
             case 0:
                 DropDownListIndex = DropDownList1.Items.IndexOf(DropDownList1.Items.FindByText(DropDownList1.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList1.Items.Count -1;
                 rdrSqlNext = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
                 break;
             case 1:
                 DropDownListIndex = DropDownList2.Items.IndexOf(DropDownList2.Items.FindByText(DropDownList2.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList2.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
                 break;
             case 2:
                 DropDownListIndex = DropDownList3.Items.IndexOf(DropDownList3.Items.FindByText(DropDownList3.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList3.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
                 break;
             case 3:
                 DropDownListIndex = DropDownList4.Items.IndexOf(DropDownList4.Items.FindByText(DropDownList4.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList4.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource4.Select(DataSourceSelectArguments.Empty);
                 break;
             case 4:
                 DropDownListIndex = DropDownList5.Items.IndexOf(DropDownList5.Items.FindByText(DropDownList5.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList5.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource5.Select(DataSourceSelectArguments.Empty);
                 break;
             case 5:
                 DropDownListIndex = DropDownList6.Items.IndexOf(DropDownList6.Items.FindByText(DropDownList6.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList6.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource6.Select(DataSourceSelectArguments.Empty);
                 break;
             case 6:
                 DropDownListIndex = DropDownList7.Items.IndexOf(DropDownList7.Items.FindByText(DropDownList7.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList7.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource7.Select(DataSourceSelectArguments.Empty);
                 break;
             case 7:
                 DropDownListIndex = DropDownList8.Items.IndexOf(DropDownList8.Items.FindByText(DropDownList8.SelectedValue));
-                DropDownListIndex += 1;
+                DropDownListIndex++;
                 DropDownListIndexB = DropDownList8.Items.Count - 1;
                 rdrSqlNext = (DataView)SqlDataSource8.Select(DataSourceSelectArguments.Empty);
                 break;
@@ -449,7 +444,7 @@ public partial class _Default : System.Web.UI.Page
             }
             TextBox1.Text = FromServerlongitude.ToString();
             TextBox2.Text = FromServerlatitude.ToString();
-            TextBox3.Text =  FromServercomment.ToString();
+            TextBox3.Text = FromServercomment;
             linkInfo.NavigateUrl = "";
             linkInfo.Text = "";
             if (FromServerwiki != "")
@@ -498,7 +493,7 @@ public partial class _Default : System.Web.UI.Page
             }
             TextBox1.Text = FromServerlongitude.ToString();
             TextBox2.Text = FromServerlatitude.ToString();
-            TextBox3.Text =  FromServercomment.ToString();
+            TextBox3.Text = FromServercomment;
             linkInfo.NavigateUrl = "";
             linkInfo.Text = "";
             if (FromServerwiki != "")
