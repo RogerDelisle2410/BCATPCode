@@ -203,7 +203,7 @@
 	</script>
 
 	 <script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hPcF2p9InbZv2GXLy9bAMlfiNvD8nyI&callback=initMap" async defer>
+		src="https://maps.googleapis.com/maps/api/js?key=google key&callback=initMap" async defer>
 	</script>
 
 	<head>
